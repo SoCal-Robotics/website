@@ -1,0 +1,11 @@
+import { chromium } from '@playwright/test';
+const browser = await chromium.launch({channel:'chrome'});
+const page = await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1});
+await page.goto('http://localhost:8080/',{waitUntil:'networkidle'});
+await page.screenshot({path:'../homepage-desktop.png',fullPage:true});
+await page.setViewportSize({width:390,height:844});
+await page.screenshot({path:'../homepage-mobile.png',fullPage:true});
+await page.goto('http://localhost:8080/programs/',{waitUntil:'networkidle'});
+await page.evaluate(async () => { await Promise.all([...document.images].map(img => { img.loading = 'eager'; return img.decode().catch(() => {}); })); });
+await page.screenshot({path:'../programs-mobile.png',fullPage:true});
+await browser.close();

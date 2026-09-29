@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+---
+<section id="banner" class="hero">
+  <div class="hero-copy"><p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>{{ eyebrow }}</p><h1>{{ title }}</h1><p class="hero-intro">{{ description }}</p><div class="actions"><a class="button primary" href="/donate/">{{ primaryLabel }} <span aria-hidden="true">↗</span></a><a class="button quiet" href="/programs/">{{ secondaryLabel }} <span aria-hidden="true">→</span></a></div><p class="hero-note">{{ note }}</p></div>
+  <figure class="hero-image"><img src="{{ image }}" alt="{{ imageAlt }}" width="1000" height="1000" fetchpriority="high"><figcaption><span>{{ imageCaption }}</span><a href="/stories/team-apex/">{{ imageLinkLabel }} <span aria-hidden="true">↗</span></a></figcaption></figure>
+</section>
+<div class="subject-strip" aria-label="Areas of support">{% for subject in subjects %}<span>{{ subject }}</span>{% endfor %}</div>
+<section class="wrapper intro" aria-labelledby="intro-title"><div class="inner"><div class="section-heading"><p class="eyebrow">{{ intro.eyebrow }}</p><h2 id="intro-title">{{ intro.title }}</h2><p>{{ intro.description }}</p></div><ul class="features">{% for item in pathways %}<li><span class="pathway-icon" aria-hidden="true">{{ item.symbol }}</span><h3>{{ item.title }}</h3><p>{{ item.description }}</p><span class="small">{{ item.subjects }}</span></li>{% endfor %}</ul><a class="text-link" href="/programs/#what-we-fund">{{ intro.linkLabel }} <span aria-hidden="true">→</span></a></div></section>
+<section class="wrapper impact-section" aria-labelledby="impact-title"><div class="inner"><div class="section-heading"><p class="eyebrow">{{ impact.eyebrow }}</p><h2 id="impact-title">{{ impact.title }}</h2><p>{{ impact.description }}</p></div>{% include 'components/stories.njk' %}</div></section>
+<section class="wrapper partner-section" aria-labelledby="partner-title"><div class="inner partner-grid"><div><p class="eyebrow">{{ partner.eyebrow }}</p><h2 id="partner-title">{{ partner.title }}</h2></div><div><p>{{ partner.description }}</p><a class="button primary" href="/get-involved/#corporate-partnerships">{{ partner.linkLabel }} <span aria-hidden="true">↗</span></a><a class="subtle-link" href="/about/#financial-transparency">{{ partner.secondaryLabel }}</a></div></div></section>
+<section class="wrapper mission-section"><div class="inner prose">{{ content | safe }}</div></section>

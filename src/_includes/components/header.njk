@@ -1,0 +1,9 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/" aria-label="SoCal Robotics home"><span class="brand-mark" aria-hidden="true">S<span>R</span></span><span>SoCal<span class="brand-light">Robotics</span></span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" hidden>Menu <span aria-hidden="true">☰</span></button>
+    <nav id="primary-navigation" aria-label="Main navigation">
+      <ul>{% for item in site.navigation %}<li><a href="{{ item.url }}" class="nav-link {{ item.style }}" {% if page.url == item.url %}aria-current="page"{% elif page.url and item.url != '/' and item.url != '#updates' and item.url in page.url %}aria-current="location"{% endif %}>{{ item.label }}</a></li>{% endfor %}</ul>
+    </nav>
+  </div>
+</header>

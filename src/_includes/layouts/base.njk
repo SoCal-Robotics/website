@@ -1,0 +1,24 @@
+<!doctype html>
+<!-- Adapted from Spectral by HTML5 UP | html5up.net | @ajlkn | CC BY 3.0. Modified for SoCal Robotics. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} | {{ site.name }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="theme-color" content="#152d42">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="{{ title }} | {{ site.name }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/assets/images/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/navigation.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  {% include 'components/header.njk' %}
+  <main id="main" tabindex="-1">{{ content | safe }}</main>
+  {% include 'components/footer.njk' %}
+</body>
+</html>

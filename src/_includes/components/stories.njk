@@ -1,0 +1,8 @@
+<div class="story-list">
+{% for story in collections.stories %}
+  <article class="spotlight">
+    <div class="image"><img src="{{ story.data.image }}" alt="{{ story.data.imageAlt }}" width="1000" height="1000" loading="lazy"></div>
+    <div class="content"><p class="eyebrow">{{ story.data.category }}</p><h3>{{ story.data.title }}</h3><p>{{ story.data.description }}</p><a class="text-link" href="{{ story.url }}">{{ story.data.linkLabel or 'Read the story' }} <span aria-hidden="true">↗</span></a></div>
+  </article>
+{% endfor %}
+</div>
