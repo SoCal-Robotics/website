@@ -1,0 +1,23 @@
+{
+  "name": "SoCal Robotics",
+  "legalName": "SoCal Robotics Inc.",
+  "email": "socalrobotics@gmail.com",
+  "ein": "42-3874219",
+  "donationUrl": "",
+  "updatesUrl": "",
+  "applicationUrl": "",
+  "navigation": [
+    {"label": "Programs", "url": "/programs/"},
+    {"label": "Get Involved", "url": "/get-involved/"},
+    {"label": "About Us", "url": "/about/"},
+    {"label": "Donate", "url": "/donate/", "style": "primary"},
+    {"label": "Get Updates", "url": "#updates", "style": "secondary"}
+  ],
+  "updates": {
+    "eyebrow": "Stay connected",
+    "title": "Follow the next possibility.",
+    "description": "Student stories, opportunities to help, and news from SoCal Robotics.",
+    "fallback": "Our email signup is being set up. For now, email us to request updates. We’ll confirm your request before adding you to a list.",
+    "button": "Request updates by email"
+  }
+}

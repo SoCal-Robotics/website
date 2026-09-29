@@ -1,0 +1,25 @@
+{
+  "name": "socal-robotics-website",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "eleventy --serve --port=8080",
+    "build": "eleventy",
+    "check": "node scripts/check-site.mjs",
+    "test": "npm run build && npm run check && node scripts/check-drafts.mjs",
+    "test:browser": "playwright test",
+    "prebuild": "node scripts/clean.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.6",
+    "markdown-it": "14.1.0",
+    "markdown-it-anchor": "9.2.0",
+    "@playwright/test": "1.56.1",
+    "@axe-core/playwright": "4.10.2",
+    "cheerio": "1.1.2"
+  }
+}

@@ -1,0 +1,13 @@
+<aside id="updates" class="updates wrapper" aria-labelledby="updates-heading">
+  <div class="inner updates-grid">
+    <div><p class="eyebrow">{{ site.updates.eyebrow }}</p><h2 id="updates-heading">{{ site.updates.title }}</h2><p>{{ site.updates.description }}</p></div>
+    <div>{% if site.updatesUrl %}<a class="button" href="{{ site.updatesUrl }}">Sign up for email updates <span aria-hidden="true">↗</span></a>{% else %}<p class="small">{{ site.updates.fallback }}</p><a class="button" href="mailto:{{ site.email }}?subject=Please%20send%20me%20SoCal%20Robotics%20updates">{{ site.updates.button }} <span aria-hidden="true">↗</span></a>{% endif %}</div>
+  </div>
+</aside>
+<footer class="site-footer wrapper">
+  <div class="inner footer-grid">
+    <div><a class="footer-name" href="/">{{ site.name }}</a><p>Opening doors to technology education.</p><p class="small">{{ site.legalName }}<br>California nonprofit · EIN {{ site.ein }}</p></div>
+    <nav aria-label="Footer"><a href="/programs/apply/">Apply for support</a><a href="/about/#financial-transparency">Financial transparency</a><a href="/about/#contact">Contact us</a><a href="/privacy/">Privacy</a></nav>
+    <div><p class="eyebrow">Let’s create more opportunities.</p><a href="mailto:{{ site.email }}">{{ site.email }}</a><p class="small attribution">Design adapted from <a href="https://html5up.net/spectral">Spectral by HTML5 UP</a>.<br>Modified under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p></div>
+  </div>
+</footer>
